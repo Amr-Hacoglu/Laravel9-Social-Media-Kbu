@@ -32,7 +32,7 @@ Route::get('/policy', function () {
 // 3- Call controller function
 // php artisan make:controller HomeController
 
-Route::get('/ind',[HomeController::class,'index'])->name('home'); // here we import the class upper to not be tall text
+Route::get('/index',[HomeController::class,'index'])->name('home'); // here we import the class upper to not be tall text
 // here we creat a new page and inside the page we create a function and here we call the function
 
 // 4- Route - Controller - View
