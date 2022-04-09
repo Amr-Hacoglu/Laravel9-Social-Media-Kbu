@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -48,6 +49,10 @@ Route::get('/param/{id}/{number}',[HomeController::class,'param'])->name('param'
 // 6- Route with post
 
 Route::post('/save',[HomeController::class,'save'])->name('save'); // post instead of get
+
+// ******************* Admin Panel **********************
+
+Route::get('/admin1',[AdminHomeController::class,'index'])->name('admin1');
 
 
 
