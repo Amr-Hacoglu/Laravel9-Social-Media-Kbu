@@ -16,12 +16,6 @@
 
 </head>
 <body class="  ">
-<!-- loader Start -->
-<div id="loading">
-    <div id="loading-center">
-    </div>
-</div>
-<!-- loader END -->
 <!-- Wrapper Start -->
 <div class="wrapper">
     <div class="iq-sidebar  sidebar-default ">
