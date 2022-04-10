@@ -54,6 +54,19 @@ Route::post('/save',[HomeController::class,'save'])->name('save'); // post inste
 
 Route::get('/admin1',[AdminHomeController::class,'index'])->name('admin1');
 
+// ******************* Sign-In Panel **********************
+
+Route::get('/signin',[App\Http\Controllers\SignInPanel\HomeController::class,'index'])->name('signin');
+
+// ******************* Sign-Up Panel **********************
+
+Route::get('/signup',[App\Http\Controllers\SignUpPanel\HomeController::class,'index'])->name('signin');
+
+// ******************* Users Operators ********************
+
+Route::get('/admin/users',[App\Http\Controllers\AdminPanel\UsersController::class,'index'])->name('admin_users');
+
+Route::get('/admin/users/signup',[App\Http\Controllers\AdminPanel\UsersController::class,'create'])->name('admin_users_create');
 
 
 
