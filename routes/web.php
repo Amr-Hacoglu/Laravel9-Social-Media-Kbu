@@ -68,6 +68,8 @@ Route::get('/admin/users',[App\Http\Controllers\AdminPanel\UsersController::clas
 
 Route::get('/admin/users/signup',[App\Http\Controllers\AdminPanel\UsersController::class,'create'])->name('admin_users_create');
 
+Route::post('/admin/users/store',[App\Http\Controllers\AdminPanel\UsersController::class,'store'])->name('admin_users_store');
+
 
 
 Route::get('/', function () {
