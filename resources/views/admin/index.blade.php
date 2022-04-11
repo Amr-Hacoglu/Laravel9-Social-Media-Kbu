@@ -21,7 +21,7 @@
 
     @include('admin.navbar')
 
-    
+    @include('admin.body')
 
     <!-- Backend Bundle JavaScript -->
 <script src="admin\html\assets\js/libs.min.js"></script>
