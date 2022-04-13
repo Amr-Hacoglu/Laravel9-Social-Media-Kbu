@@ -52,7 +52,7 @@ Route::post('/save',[HomeController::class,'save'])->name('save'); // post inste
 
 // ******************* Admin Panel **********************
 
-Route::get('/admin1',[AdminHomeController::class,'index'])->name('admin1');
+Route::get('/',[AdminHomeController::class,'index']);
 
 // ******************* Sign-In Panel **********************
 
@@ -64,7 +64,7 @@ Route::get('/signup',[App\Http\Controllers\SignUpPanel\HomeController::class,'in
 
 // ******************* Users Operators ********************
 
-Route::get('/admin/users',[App\Http\Controllers\AdminPanel\UsersController::class,'index'])->name('admin_users');
+Route::get('/admin/users/signin',[App\Http\Controllers\AdminPanel\UsersController::class,'index'])->name('admin_users_signin');
 
 Route::get('/admin/users/signup',[App\Http\Controllers\AdminPanel\UsersController::class,'create'])->name('admin_users_create');
 
@@ -72,7 +72,7 @@ Route::post('/admin/users/store',[App\Http\Controllers\AdminPanel\UsersControlle
 
 
 
-Route::get('/', function () {
+Route::get('/laravel', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
@@ -80,6 +80,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
 
 Route::middleware([
     'auth:sanctum',

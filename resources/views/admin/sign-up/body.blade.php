@@ -55,7 +55,7 @@
                                 <button type="submit" class="btn btn-primary float-end">Sign Up</button>
                             </div>
                             <div class="sign-info">
-                                <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a href="../../admin/users">Log In</a></span>
+                                <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a href="../../admin/users/signin">Log In</a></span>
                                 <ul class="iq-social-media">
                                     <li><a href="#"><i class="ri-facebook-box-line"></i></a></li>
                                     <li><a href="#"><i class="ri-twitter-line"></i></a></li>
