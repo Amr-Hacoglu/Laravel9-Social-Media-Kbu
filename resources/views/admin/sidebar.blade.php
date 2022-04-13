@@ -3,7 +3,7 @@
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
                 <li class="">
-                    <a href="/admin1" class=" ">
+                    <a href="/" class=" ">
                         <i class="las la-newspaper"></i><span>Newsfeed</span>
                     </a>
                 </li>
@@ -12,11 +12,13 @@
                         <i class="las la-user"></i><span>Profile</span>
                     </a>
                 </li>
-{{--                <li class="">--}}
-{{--                    <a href="admin\html\app/group.html" class=" ">--}}
-{{--                        <i class="las la-users"></i><span>Group</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="">
+                    <a href="/create" class=" ">
+                        <img src="admin\html\assets\new\add.png" height="20" width="20">
+                        &emsp;
+                        <span>Creat post</span>
+                    </a>
+                </li>
 {{--                <li class=" ">--}}
 {{--                    <a href="admin\html\app/todo.html" class=" ">--}}
 {{--                        <i class="las la-check-circle"></i><span>Todo</span>--}}

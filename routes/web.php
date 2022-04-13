@@ -70,6 +70,13 @@ Route::get('/admin/users/signup',[App\Http\Controllers\AdminPanel\UsersControlle
 
 Route::post('/admin/users/store',[App\Http\Controllers\AdminPanel\UsersController::class,'store'])->name('admin_users_store');
 
+// ******************* Post ********************
+
+Route::get('/posts',[App\Http\Controllers\CreatePost\HomeController::class,'index'])->name('posts');
+
+Route::get('/create',[App\Http\Controllers\CreatePost\HomeController::class,'create'])->name('create');
+
+
 
 
 Route::get('/laravel', function () {
