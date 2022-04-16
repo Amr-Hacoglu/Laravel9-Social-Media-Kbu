@@ -5,7 +5,7 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
+use App\Http\Controllers\CreatePost\HomeController as createpostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,12 +72,17 @@ Route::post('/admin/users/store',[App\Http\Controllers\AdminPanel\UsersControlle
 
 // ******************* Post ********************
 
-Route::get('/posts',[App\Http\Controllers\CreatePost\HomeController::class,'index'])->name('posts');
+Route::get('/admin/createpost',[createpostController::class,'index'])->name('admin_createpost');
 
-Route::get('/create',[App\Http\Controllers\CreatePost\HomeController::class,'create'])->name('create');
+Route::get('/admin/createpost/create',[createpostController::class,'create'])->name('admin_createpost_create');
 
+Route::match(['get','post'],'/admin/createpost/store',[createpostController::class,'store'])->name('admin_createpost_store');
 
+Route::get('/admin/createpost/edit/{id}',[createpostController::class,'edit'])->name('admin_createpost_edit');
 
+Route::post('/admin/createpost/update/{id}',[createpostController::class,'update'])->name('admin_createpost_update');
+
+//Route::get('/admin/createpost/delete/{id}',[createpostController::class,'delete'])->name('admin_createpost_delete');
 
 Route::get('/laravel', function () {
     return Inertia::render('Welcome', [
