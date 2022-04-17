@@ -8,17 +8,60 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="../../admin\html\app/profile.html" class=" ">
-                        <i class="las la-user"></i><span>Profile</span>
+                    <a href="/admin/createpost/create" class=" ">
+                        <img src="../../admin\html\assets\new\add.png" height="20" width="20">
+                        &emsp;
+                        <span>Create post</span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="/create" class=" ">
-                        <img src="../../admin\html\assets\new\add.png" height="20" width="20">
+                    <a href="../../admin\html\app/profile.html" class=" ">
+                        <img src="../../admin\html\assets\images\new\user.png" height="20" width="20">
                         &emsp;
-                        <span>Creat post</span>
+                        <span>Profile</span>
+                    </a>
+                </li><li class="">
+                    <a href="/" class=" ">
+                        <img src="../../admin\html\assets\images\new\image.png" height="20" width="20">
+                        &emsp;
+                        <span>Images</span>
                     </a>
                 </li>
+
+                <li class="">
+                    <a href="/" class=" ">
+                        <img src="../../admin\html\assets\images\new\friends.png" height="20" width="20">
+                        &emsp;
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/" class=" ">
+                        <img src="../../admin\html\assets\images\new\chat.png" height="20" width="20">
+                        &emsp;
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/" class=" ">
+                        <img src="../../admin\html\assets\images\new\profile.png" height="20" width="20">
+                        &emsp;
+                        <span>Users</span>
+                    </a>
+                </li><li class="">
+                    <a href="/" class=" ">
+                        <img src="../../admin\html\assets\images\new\settings.png" height="20" width="20">
+                        &emsp;
+                        <span>Setting</span>
+                    </a>
+                <li class="">
+                    <a href="/" class=" ">
+                        <img src="../../admin\html\assets\images\new\feq.png" height="20" width="20">
+                        &emsp;
+                        <span>FEQ</span>
+                    </a>
+                </li>
+
 {{--                <li class=" ">--}}
 {{--                    <a href="admin\html\app/todo.html" class=" ">--}}
 {{--                        <i class="las la-check-circle"></i><span>Todo</span>--}}
@@ -271,6 +314,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="iq-search-bar device-search">
                 <form action="#" class="searchbox">
                     <a class="search-link" href="#"><i class="ri-search-line"></i></a>
@@ -282,6 +326,7 @@
                     aria-label="Toggle navigation">
                 <i class="ri-menu-3-line"></i>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav  ms-auto navbar-list">
                     <li>
@@ -602,4 +647,3 @@
         </nav>
     </div>
 </div>
-

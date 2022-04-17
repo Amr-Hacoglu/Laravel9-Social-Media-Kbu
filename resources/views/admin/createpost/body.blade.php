@@ -7,9 +7,13 @@
                     <img src="../../admin/html/assets/images/icon/3329467.png" width="15" height="15";
                     <h4 class="card-title">&nbsp;&nbsp;Create Post</h4>
                 </div>
+                <hr>
+                <div class="header-title">
+                    <a href="{{route('admin.createpost')}}" class="btn btn-secondary">Main page</a>
+                </div>
             </div>
             <div class="card-body">
-                <form method="post" action="../../admin/createpost/store" >
+                <form method="post" action="{{route('admin.createpost.store')}}" >
                     @csrf
                     <input type="text" class="form-control rounded" placeholder="Write something here..." name="text" style="border:none;">
                 <hr>

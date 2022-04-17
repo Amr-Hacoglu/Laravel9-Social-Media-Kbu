@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -19,8 +19,6 @@
 
 
     @include('home.sidebar')
-    @section('sidebar')
-    @show
 
     @include('home.navbar')
 

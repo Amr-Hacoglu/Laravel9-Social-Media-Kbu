@@ -7,9 +7,13 @@
                     <img src="../../../admin/html/assets/images/icon/edit.png" width="15" height="15";
                     <h4 class="card-title">&nbsp;&nbsp;Edit post with {{$data->id}}.id</h4>
                 </div>
+                <hr>
+                <div class="header-title">
+                    <a href="{{route('admin.createpost.create')}}" class="btn btn-primary">Add new post</a>
+                </div>
             </div>
             <div class="card-body">
-                <form method="post" action="../../../admin/createpost/update/{{$data->id}}" >
+                <form method="post" action="{{route('admin.createpost.update',['id'=>$data->id])}}" >
                     @csrf
                     <input type="text" value="{{$data->text}}" class="form-control rounded" placeholder="Write something here..." name="text" style="border:none;">
                 <hr>
@@ -21,7 +25,7 @@
 
                     </li>
                 </ul>
-                <button type="submit" class="btn btn-primary d-block w-100 mt-3">Update</button>
+                <button type="submit" class="btn btn-success d-block w-100 mt-3">Update</button>
                 </form>
             </div>
             <img class="social1" src="../../../admin/html/assets/images/new/social_media.png">

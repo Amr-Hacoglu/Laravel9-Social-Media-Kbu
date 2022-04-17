@@ -1,49 +1,51 @@
-@include('admin.sidebar')
-
-@include('admin.navbar')
-
-@include('admin.index')
-
 <!-- Wrapper Start -->
 <div class="wrapper">
 
     <div id="content-page" class="content-page">
         <div class="container">
             <div class="row">
-{{--               <h5>Here we go</h5>--}}
-                @include('admin.createpost.posts');
-{{--                @foreach($data as $members)--}}
-{{--                    <div class="col-lg-12">--}}
-{{--                        <div class="post">--}}
+                @foreach($data as $members)
+                    <div class="col-lg-12">
+                        <div class="post">
 
-{{--                            <div id="post-modal-data" class="card card-block card-stretch card-height">--}}
-{{--                                <div class="card-header d-flex justify-content-between">--}}
-{{--                                    <div class="header-title">--}}
-{{--                                        <h4 class="card-title">Created Post</h4>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
+                            <div id="post-modal-data" class="card card-block card-stretch card-height">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="header-title">
+                                        <h4 class="card-title">Created Post</h4>
+                                    </div>
 
-{{--                                <div class="card-body">--}}
-{{--                                    <a href="/admin/createpost/edit/{{$members->id}}" class="btn btn-block btn-outline-success">Edit</a>--}}
-{{--                                    <a href="/admin/createpost/delete/{{$members->id}}" class="btn btn-block btn-outline-danger">Delete</a>--}}
-{{--                                </div>--}}
+                                    <div class="card-post-toolbar">
+                                        <div class="dropdown">
+                                        <span class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                            <i class="ri-more-fill"></i>
+                                        </span>
+                                            <div class="dropdown-menu m-0 p-0">
+                                                <div class="card-body">
+                                                    <a style="color: #1e7e34" href="{{route('admin.createpost.edit',['id' => $members->id])}}">Edit</a>
+                                                </div>
 
-{{--                                <div class="card-body">--}}
-{{--                                    <h4>{{$members->text}}</h4>--}}
-{{--                                    --}}{{--<h3>Written things</h3>--}}
-{{--                                </div>--}}
-{{--                                <hr>--}}
-{{--                                <div class="card-body">--}}
-{{--                                    <h4>{{$members->photovideofile}}</h4>--}}
-{{--                                    --}}{{--<h3>Written things</h3>--}}
-{{--                                </div>--}}
-{{--                                <hr>--}}
+                                                <div class="card-body">
+                                                    <a style="color: red" href="{{route('admin.createpost.destroy',['id' => $members->id])}}">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4>{{$members->text}}</h4>
+                                    {{--<h3>Written things</h3>--}}
+                                </div>
+                                <hr>
+                                <div class="card-body">
+                                    <h4>{{$members->photovideofile}}</h4>
+                                    {{--<h3>Written things</h3>--}}
+                                </div>
+                                <hr>
 
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @endforeach--}}
-{{--                    @include('admin.createpost.posts');--}}
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

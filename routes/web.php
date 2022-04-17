@@ -52,7 +52,7 @@ Route::post('/save',[HomeController::class,'save'])->name('save'); // post inste
 
 // ******************* Admin Panel **********************
 
-Route::get('/',[AdminHomeController::class,'index']);
+Route::get('/admin1',[AdminHomeController::class,'index']);
 
 // ******************* Sign-In Panel **********************
 
@@ -70,19 +70,27 @@ Route::get('/admin/users/signup',[App\Http\Controllers\AdminPanel\UsersControlle
 
 Route::post('/admin/users/store',[App\Http\Controllers\AdminPanel\UsersController::class,'store'])->name('admin_users_store');
 
-// ******************* Post ********************
+// ************************* Post *************************
 
-Route::get('/admin/createpost',[createpostController::class,'index'])->name('admin_createpost');
+Route::prefix('admin/createpost')->name('admin.createpost')->controller(createpostController::class)->group(function (){
 
-Route::get('/admin/createpost/create',[createpostController::class,'create'])->name('admin_createpost_create');
+    Route::get('','index')->name('');
 
-Route::match(['get','post'],'/admin/createpost/store',[createpostController::class,'store'])->name('admin_createpost_store');
+    Route::get('/create','create')->name('.create');
 
-Route::get('/admin/createpost/edit/{id}',[createpostController::class,'edit'])->name('admin_createpost_edit');
+    Route::match(['get','post'],'/store','store')->name('.store');
 
-Route::post('/admin/createpost/update/{id}',[createpostController::class,'update'])->name('admin_createpost_update');
+    Route::get('/edit/{id}','edit')->name('.edit');
 
-//Route::get('/admin/createpost/delete/{id}',[createpostController::class,'delete'])->name('admin_createpost_delete');
+    Route::post('/update/{id}','update')->name('.update');
+
+    Route::get('/destroy/{id}','destroy')->name('.destroy');
+
+    //Route::get('/show/{id}','show')->name('.show');
+
+    //Route::get('/show','show')->name('.show');
+
+});
 
 Route::get('/laravel', function () {
     return Inertia::render('Welcome', [
