@@ -36,16 +36,6 @@
 
 </style>
 
-{{--  1              <a href="#" class="btn btn-soft-primary">
-                      <img src="admin\html\assets\images\small/07.png" alt="icon" class="img-fluid me-2"> Photo/Video
-                    </a>--}}
-
-{{--  2
-                    <a href="#" class="btn btn-soft-primary">
-                        <img src="admin\html\assets\images\small/12.png" alt="icon" class="img-fluid me-2"> File
-                    </a>
-                    --}}
-
 {{--
 <input type="radio" id="Happy" name="drone" value="Happy" name="Happy" checked>
 <img src="admin/html/assets/images/smiles/smile.png" height="20" width="20">

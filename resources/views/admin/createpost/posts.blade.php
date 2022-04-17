@@ -7,7 +7,6 @@
                 @foreach($data as $members)
                     <div class="col-lg-12">
                         <div class="post">
-
                             <div id="post-modal-data" class="card card-block card-stretch card-height">
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">

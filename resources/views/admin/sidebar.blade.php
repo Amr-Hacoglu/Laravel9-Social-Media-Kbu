@@ -3,12 +3,12 @@
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
                 <li class="">
-                    <a href="/" class=" ">
+                    <a href="{{route('admin.createpost')}}" class=" ">
                         <i class="las la-newspaper"></i><span>Newsfeed</span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="/admin/createpost/create" class=" ">
+                    <a href="{{route('admin.createpost.create')}}" class=" ">
                         <img src="../../admin\html\assets\new\add.png" height="20" width="20">
                         &emsp;
                         <span>Create post</span>

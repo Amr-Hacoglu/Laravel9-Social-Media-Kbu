@@ -10,6 +10,7 @@
                 <hr>
                 <div class="header-title">
                     <a href="{{route('admin.createpost.create')}}" class="btn btn-primary">Add new post</a>
+                    <a href="{{route('admin.createpost')}}" class="btn btn-secondary">Main page</a>
                 </div>
             </div>
             <div class="card-body">
