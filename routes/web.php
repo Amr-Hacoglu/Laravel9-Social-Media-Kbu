@@ -94,7 +94,7 @@ Route::prefix('admin/createpost')->name('admin.createpost')->controller(createpo
 
 // **************************** chat ************************************
 
-Route::get('/chat',[App\Http\Controllers\ChatPanel\HomeController::class,'index'])->name('chat');
+Route::get('/admin/chat',[App\Http\Controllers\ChatPanel\HomeController::class,'index'])->name('chat');
 
 Route::get('/laravel', function () {
     return Inertia::render('Welcome', [

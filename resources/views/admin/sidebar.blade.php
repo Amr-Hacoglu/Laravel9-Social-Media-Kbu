@@ -36,7 +36,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="/" class=" ">
+                    <a href="/admin/chat" class=" ">
                         <img src="../../admin\html\assets\images\new\chat.png" height="20" width="20">
                         &emsp;
                         <span>Messages</span>
