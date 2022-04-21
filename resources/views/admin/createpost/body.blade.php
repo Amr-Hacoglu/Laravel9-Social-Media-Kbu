@@ -13,8 +13,14 @@
                 </div>
             </div>
             <div class="card-body">
-                <form method="post" action="{{route('admin.createpost.store')}}" >
+                <form action="{{route('admin.createpost.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
+                    {{--
+                    <div class="card-body">
+                        <label>Parent Creating</label>
+
+                    </div>
+                    --}}
                     <input type="text" class="form-control rounded" placeholder="Write something here..." name="text" style="border:none;">
                 <hr>
                 <ul class=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">

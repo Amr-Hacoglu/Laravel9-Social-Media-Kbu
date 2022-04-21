@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form method="post" action="{{route('admin.createpost.update',['id'=>$data->id])}}" >
+                <form method="post" action="{{route('admin.createpost.update',['id'=>$data->id])}}" enctype="multipart/form-data" >
                     @csrf
                     <input type="text" value="{{$data->text}}" class="form-control rounded" placeholder="Write something here..." name="text" style="border:none;">
                 <hr>

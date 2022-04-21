@@ -52,7 +52,7 @@ Route::post('/save',[HomeController::class,'save'])->name('save'); // post inste
 
 // ******************* Admin Panel **********************
 
-Route::get('/admin1',[AdminHomeController::class,'index']);
+Route::get('/adminindex',[AdminHomeController::class,'index']);
 
 // ******************* Sign-In Panel **********************
 
@@ -64,11 +64,25 @@ Route::get('/signup',[App\Http\Controllers\SignUpPanel\HomeController::class,'in
 
 // ******************* Users Operators ********************
 
+
 Route::get('/admin/users/signin',[App\Http\Controllers\AdminPanel\UsersController::class,'index'])->name('admin_users_signin');
 
 Route::get('/admin/users/signup',[App\Http\Controllers\AdminPanel\UsersController::class,'create'])->name('admin_users_create');
 
 Route::post('/admin/users/store',[App\Http\Controllers\AdminPanel\UsersController::class,'store'])->name('admin_users_store');
+
+/*
+
+Route::prefix('/admin/users')->name('admin.users.')->controller(App\Http\Controllers\AdminPanel\UsersController::class)->group(function (){
+
+Route::get('/signin','index')->name('signin');
+
+Route::get('/signup','create')->name('create');
+
+Route::post('/store','store')->name('store');
+
+});
+*/
 
 // ************************* Post *************************
 
@@ -91,10 +105,37 @@ Route::prefix('admin/createpost')->name('admin.createpost')->controller(createpo
     //Route::get('/show','show')->name('.show');
 
 });
+/*
+ Route::prefix('admin1')->name('admin1.')->group(function (){
+
+    Route::get('/',[createpostController::class,'index'])->name('index');
+
+        Route::prefix('/createpost')->name('createpost.')->controller(createpostController::class)->group(function (){
+
+            Route::get('/create','create')->name('create');
+
+            Route::match(['get','post'],'/store','store')->name('store');
+
+            Route::get('/edit/{id}','edit')->name('edit');
+
+            Route::post('/update/{id}','update')->name('update');
+
+            Route::get('/destroy/{id}','destroy')->name('destroy');
+
+            //Route::get('/show/{id}','show')->name('.show');
+
+            //Route::get('/show','show')->name('.show');
+
+    });
+});
+ */
 
 // **************************** chat ************************************
 
 Route::get('/admin/chat',[App\Http\Controllers\ChatPanel\HomeController::class,'index'])->name('chat');
+
+
+
 
 Route::get('/laravel', function () {
     return Inertia::render('Welcome', [

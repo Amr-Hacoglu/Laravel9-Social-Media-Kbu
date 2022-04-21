@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
 {{--               <h5>Here we go</h5>--}}
-                @include('admin.createpost.posts');
+                @include('admin.createpost.posts')
 {{--                @foreach($data as $members)--}}
 {{--                    <div class="col-lg-12">--}}
 {{--                        <div class="post">--}}

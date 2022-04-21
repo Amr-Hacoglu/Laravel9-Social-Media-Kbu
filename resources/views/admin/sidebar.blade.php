@@ -20,13 +20,13 @@
                         &emsp;
                         <span>Profile</span>
                     </a>
-                </li><li class="">
-                    <a href="/" class=" ">
-                        <img src="../../admin\html\assets\images\new\image.png" height="20" width="20">
-                        &emsp;
-                        <span>Images</span>
-                    </a>
-                </li>
+{{--                </li><li class="">--}}
+{{--                    <a href="/" class=" ">--}}
+{{--                        <img src="../../admin\html\assets\images\new\image.png" height="20" width="20">--}}
+{{--                        &emsp;--}}
+{{--                        <span>Images</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
                 <li class="">
                     <a href="/" class=" ">
@@ -39,7 +39,7 @@
                     <a href="/admin/chat" class=" ">
                         <img src="../../admin\html\assets\images\new\chat.png" height="20" width="20">
                         &emsp;
-                        <span>Messages</span>
+                        <span>Chat</span>
                     </a>
                 </li>
                 <li class="">

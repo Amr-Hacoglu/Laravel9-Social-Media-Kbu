@@ -38,6 +38,7 @@
                         @csrf
                         <h1 class="mb-0">Sign in</h1>
                         <p>Enter your email address and password to access admin panel.</p>
+{{--                        <form class="mt-4" action="{{route('admin.users.index')}}">--}}
                         <form class="mt-4" action="/admin1">
                             <div class="form-group">
                                 <label class="form-label" for="exampleInputEmail1">Email address</label>
@@ -53,6 +54,7 @@
                             </div>
                             <div class="sign-info">
                                 <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="../../admin/users/signup">Sign up</a></span>
+{{--                                <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="{{route('admin.users.create')}}">Sign up</a></span>--}}
                                 <ul class="iq-social-media">
                                     <li><a href="#"><i class="ri-facebook-box-line"></i></a></li>
                                     <li><a href="#"><i class="ri-twitter-line"></i></a></li>

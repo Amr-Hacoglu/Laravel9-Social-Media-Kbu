@@ -35,12 +35,14 @@
                                     {{--<h3>Written things</h3>--}}
                                 </div>
                                 <hr>
-                                <div class="card-body">
-                                    <h4>{{$members->photovideofile}}</h4>
+                                <div class="card-body" id="photopost">
+                                    @if($members->photovideofile)
+                                        <img src="{{Storage::url($members->photovideofile)}}" width="870" height="600" >
+                                    @endif
+{{--                                    <h4>{{$members->photovideofile}}</h4>--}}
                                     {{--<h3>Written things</h3>--}}
-                                </div>
-                                <hr>
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -50,6 +52,7 @@
     </div>
 </div>
 <!-- Wrapper End-->
+{{--
 <footer class="iq-footer bg-white">
     <div class="container-fluid">
         <div class="row">
@@ -65,7 +68,7 @@
         </div>
     </div>
 </footer>
-
+--}}
 <!-- offcanvas start -->
 
 <div class="offcanvas offcanvas-bottom share-offcanvas" tabindex="-1" id="share-btn" aria-labelledby="shareBottomLabel">
