@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
 {{--               <h5>Here we go</h5>--}}
-                @include('admin.createpost.posts')
+                @include('admin.Content.posts')
 {{--                @foreach($data as $members)--}}
 {{--                    <div class="col-lg-12">--}}
 {{--                        <div class="post">--}}
@@ -24,8 +24,8 @@
 {{--                                </div>--}}
 
 {{--                                <div class="card-body">--}}
-{{--                                    <a href="/admin/createpost/edit/{{$members->id}}" class="btn btn-block btn-outline-success">Edit</a>--}}
-{{--                                    <a href="/admin/createpost/delete/{{$members->id}}" class="btn btn-block btn-outline-danger">Delete</a>--}}
+{{--                                    <a href="/admin/Content/edit/{{$members->id}}" class="btn btn-block btn-outline-success">Edit</a>--}}
+{{--                                    <a href="/admin/Content/delete/{{$members->id}}" class="btn btn-block btn-outline-danger">Delete</a>--}}
 {{--                                </div>--}}
 
 {{--                                <div class="card-body">--}}
@@ -43,7 +43,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
 {{--                @endforeach--}}
-{{--                    @include('admin.createpost.posts');--}}
+{{--                    @include('admin.Content.posts');--}}
             </div>
         </div>
     </div>

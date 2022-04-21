@@ -20,24 +20,24 @@
                                         </span>
                                             <div class="dropdown-menu m-0 p-0">
                                                 <div class="card-body">
-                                                    <a style="color: #1e7e34" href="{{route('admin.createpost.edit',['id' => $members->id])}}">Edit</a>
+                                                    <a style="color: #1e7e34" href="{{route('admin.Content.edit',['id' => $members->id])}}">Edit</a>
                                                 </div>
 
                                                 <div class="card-body">
-                                                    <a style="color: red" href="{{route('admin.createpost.destroy',['id' => $members->id])}}">Delete</a>
+                                                    <a style="color: red" href="{{route('admin.Content.destroy',['id' => $members->id])}}">Delete</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4>{{$members->text}}</h4>
+                                    <h4>{{$members->desc}}</h4>
                                     {{--<h3>Written things</h3>--}}
                                 </div>
                                 <hr>
-                                <div class="card-body" id="photopost">
-                                    @if($members->photovideofile)
-                                        <img src="{{Storage::url($members->photovideofile)}}" width="870" height="600" >
+                                <div class="card-body" id="image">
+                                    @if($members->image)
+                                        <img src="{{Storage::url($members->image)}}" width="870" height="600" >
                                     @endif
 {{--                                    <h4>{{$members->photovideofile}}</h4>--}}
                                     {{--<h3>Written things</h3>--}}
