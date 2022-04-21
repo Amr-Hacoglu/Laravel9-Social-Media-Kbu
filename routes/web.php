@@ -64,12 +64,15 @@ Route::get('/signup',[App\Http\Controllers\SignUpPanel\HomeController::class,'in
 
 // ******************* Users Operators ********************
 
+Route::prefix('admin/users')->name('admin.users')->controller(App\Http\Controllers\AdminPanel\UsersController::class)->group(function (){
 
-Route::get('/admin/users/signin',[App\Http\Controllers\AdminPanel\UsersController::class,'index'])->name('admin_users_signin');
+Route::get('/signin','index')->name('.signin');
 
-Route::get('/admin/users/signup',[App\Http\Controllers\AdminPanel\UsersController::class,'create'])->name('admin_users_create');
+Route::get('/signup','create')->name('.signup');
 
-Route::post('/admin/users/store',[App\Http\Controllers\AdminPanel\UsersController::class,'store'])->name('admin_users_store');
+Route::post('/store','store')->name('.store');
+
+});
 
 /*
 

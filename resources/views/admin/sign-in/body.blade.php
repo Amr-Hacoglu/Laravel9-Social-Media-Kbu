@@ -53,7 +53,7 @@
                                 <button type="submit" class="btn btn-primary float-end">Sign in</button>
                             </div>
                             <div class="sign-info">
-                                <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="../../admin/users/signup">Sign up</a></span>
+                                <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="{{route('admin.users.signup')}}">Sign up</a></span>
 {{--                                <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="{{route('admin.users.create')}}">Sign up</a></span>--}}
                                 <ul class="iq-social-media">
                                     <li><a href="#"><i class="ri-facebook-box-line"></i></a></li>

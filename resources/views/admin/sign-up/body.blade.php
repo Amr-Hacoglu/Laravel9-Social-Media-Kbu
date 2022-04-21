@@ -37,7 +37,7 @@
                     <div class="sign-in-from">
                         <h1 class="mb-0">Sign Up</h1>
                         <p>Enter your email address and password to access admin panel.</p>
-                        <form class="mt-4" action="/admin/users/store" method="post">
+                        <form class="mt-4" action="{{route('admin.users.store')}}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label class="form-label" for="exampleInputEmail1">Your Full Name</label>
@@ -55,7 +55,7 @@
                                 <button type="submit" class="btn btn-primary float-end">Sign Up</button>
                             </div>
                             <div class="sign-info">
-                                <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a href="../../admin/users/signin">Log In</a></span>
+                                <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a href="{{route('admin.users.signin')}}">Log In</a></span>
                                 <ul class="iq-social-media">
                                     <li><a href="#"><i class="ri-facebook-box-line"></i></a></li>
                                     <li><a href="#"><i class="ri-twitter-line"></i></a></li>
