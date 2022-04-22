@@ -1,10 +1,9 @@
 <!-- Wrapper Start -->
 <div class="wrapper">
-
     <div id="content-page" class="content-page">
         <div class="container">
             <div class="row">
-                @foreach($data as $members)
+                @foreach($data as $newdata)
                     <div class="col-lg-12">
                         <div class="post">
                             <div id="post-modal-data" class="card card-block card-stretch card-height">
@@ -20,29 +19,42 @@
                                         </span>
                                             <div class="dropdown-menu m-0 p-0">
                                                 <div class="card-body">
-                                                    <a style="color: #1e7e34" href="{{route('admin.Content.edit',['id' => $members->id])}}">Edit</a>
+                                                    <a style="color: #1e7e34" href="{{route('admin.Content.edit',['id' => $newdata->id])}}">Edit</a>
                                                 </div>
 
                                                 <div class="card-body">
-                                                    <a style="color: red" href="{{route('admin.Content.destroy',['id' => $members->id])}}">Delete</a>
+                                                    <a style="color: red" href="{{route('admin.Content.destroy',['id' => $newdata->id])}}">Delete</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h4>{{$members->desc}}</h4>
+                                    <h4>{{$newdata->desc}}</h4>
                                     {{--<h3>Written things</h3>--}}
                                 </div>
-                                <hr>
                                 <div class="card-body" id="image">
-                                    @if($members->image)
-                                        <img src="{{Storage::url($members->image)}}" width="870" height="600" >
+                                    @if($newdata->image)
+                                        <img src="{{Storage::url($newdata->image)}}" width="870" height="600" >
                                     @endif
 {{--                                    <h4>{{$members->photovideofile}}</h4>--}}
                                     {{--<h3>Written things</h3>--}}
-
                                 </div>
+                                <div>
+                                    <img src="../admin/html/assets/images/icon/01.png" class="img-fluid" alt="">
+                                    <a href="#"><bottom>Likes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</bottom></a>
+                                    <a href="#"><bottom>Comment</bottom></a>
+                                </div>
+                                {{--<hr class="postcomment">--}}
+                                <form class="comment-text d-flex align-items-center mt-3" action="javascript:void(0);">
+                                    <input type="text" class="form-control rounded" placeholder="Enter Your Comment">
+                                    <div class="comment-attagement d-flex">
+                                        <a href="#"><i class="ri-link me-3"></i></a>
+                                        <a href="#"><i class="ri-user-smile-line me-3"></i></a>
+                                        <a href="#"><i class="ri-camera-line me-3"></i></a>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -105,3 +117,11 @@
         </div>
     </div>
 </div>
+<style>
+    .postcomment{
+        margin: -0.75;
+    }
+    .img-fluid{
+        margin-left: 20;
+    }
+</style>

@@ -137,7 +137,9 @@ Route::prefix('admin/Content')->name('admin.Content')->controller(contentControl
 
 Route::get('/admin/chat',[App\Http\Controllers\ChatPanel\HomeController::class,'index'])->name('chat');
 
+// **************************** profile ************************************
 
+Route::get('/admin/profile',[App\Http\Controllers\Profile\ProfileController::class,'index'])->name('profile');
 
 
 Route::get('/laravel', function () {
