@@ -21,7 +21,7 @@
                         <span>Profile</span>
                     </a>
                 <li class="">
-                    <a href="/" class=" ">
+                    <a href="/admin/friends" class=" ">
                         <img src="../../admin\html\assets\images\new\friends.png" height="20" width="20">
                         &emsp;
                         <span>Friends</span>

@@ -141,6 +141,11 @@ Route::get('/admin/chat',[App\Http\Controllers\ChatPanel\HomeController::class,'
 
 Route::get('/admin/profile',[App\Http\Controllers\Profile\ProfileController::class,'index'])->name('profile');
 
+// **************************** friends ************************************
+
+Route::get('/admin/friends',[App\Http\Controllers\Friends\friendsController::class,'index'])->name('profile');
+
+
 
 Route::get('/laravel', function () {
     return Inertia::render('Welcome', [

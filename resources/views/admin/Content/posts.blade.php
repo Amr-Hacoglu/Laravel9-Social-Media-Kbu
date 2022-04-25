@@ -37,7 +37,7 @@
                                     @if($newdata->image)
                                         <img src="{{Storage::url($newdata->image)}}" width="870" height="600" >
                                     @endif
-{{--                                    <h4>{{$members->photovideofile}}</h4>--}}
+                                    {{--h4>{{$members->photovideofile}}</h4>--}}
                                     {{--<h3>Written things</h3>--}}
                                 </div>
                                 <div>
@@ -54,7 +54,6 @@
                                         <a href="#"><i class="ri-camera-line me-3"></i></a>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>
