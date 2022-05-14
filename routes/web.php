@@ -6,6 +6,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\Content\ContentController as contentController;
+use App\Http\Controllers\Comment\commentController as commentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -103,7 +104,7 @@ Route::prefix('admin/Content')->name('admin.Content')->controller(contentControl
 
     Route::get('/destroy/{id}','destroy')->name('.destroy');
 
-    //Route::get('/show/{id}','show')->name('.show');
+    Route::get('/show/{id}','show')->name('.show');
 
     //Route::get('/show','show')->name('.show');
 
@@ -137,14 +138,34 @@ Route::prefix('admin/Content')->name('admin.Content')->controller(contentControl
 
 Route::get('/admin/chat',[App\Http\Controllers\ChatPanel\HomeController::class,'index'])->name('chat');
 
-// **************************** profile ************************************
+// **************************** profile **********************************
 
 Route::get('/admin/profile',[App\Http\Controllers\Profile\ProfileController::class,'index'])->name('profile');
 
-// **************************** friends ************************************
+// **************************** friends ***********************************
 
 Route::get('/admin/friends',[App\Http\Controllers\Friends\friendsController::class,'index'])->name('profile');
 
+
+// *************************** comment ************************************
+
+Route::prefix('admin/comment')->name('admin.comment')->controller(commentController::class)->group(function (){
+
+    Route::get('','index')->name('');
+
+    Route::get('/create','create')->name('.create');
+
+    Route::match(['get','post'],'/store','store')->name('.store');
+
+    Route::get('/edit/{id}','edit')->name('.edit');
+
+    Route::post('/update/{id}','update')->name('.update');
+
+    Route::get('/destroy/{id}','destroy')->name('.destroy');
+
+    Route::get('/show/{id}','show')->name('.show');
+
+});
 
 
 Route::get('/laravel', function () {

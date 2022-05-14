@@ -4,7 +4,7 @@
         <div id="post-modal-data" class="card card-block card-stretch card-height">
             <div class="card-header d-flex justify-content-between">
                 <div class="header-title">
-                    <img src="../../../admin/html/assets/images/icon/edit.png" width="15" height="15";
+                    <img src="../../../admin/html/assets/images/icon/edit.png" width="15" height="15">
                     <h4 class="card-title">&nbsp;&nbsp;Edit post with {{$data->id}}.id</h4>
                 </div>
                 <hr>

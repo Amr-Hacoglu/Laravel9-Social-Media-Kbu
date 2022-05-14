@@ -37,25 +37,3 @@
             <img class="social1" src="../../admin/html/assets/images/new/social_media.png">
         </div>
     </div>
-
-<style>
-
-</style>
-
-{{--
-<input type="radio" id="Happy" name="drone" value="Happy" name="Happy" checked>
-<img src="admin/html/assets/images/smiles/smile.png" height="20" width="20">
-<label for="Happy"> Happy &nbsp;&nbsp;&nbsp;
-
-<input type="radio" id="Sad" name="drone" value="Sad" name="Sad">
-<img src="admin/html/assets/images/smiles/sad.png" height="20" width="20">
-<label for="Sad"> Sad &nbsp;&nbsp;&nbsp;
-
-<input type="radio" id="Lovely" name="drone" value="Lovely" name="Lovely">
-<img src="admin/html/assets/images/smiles/lovely.png" height="20" width="20">
-<label for="Lovely"> Lovely &nbsp;&nbsp;&nbsp;
-
-<input type="radio" id="Excited" name="drone" value="Excited" name="Excited">
-<img src="admin/html/assets/images/smiles/star.png" height="20" width="20">
-<label for="Excited"> Excited &nbsp;&nbsp;&nbsp;
---}}

@@ -18,7 +18,7 @@
 </head>
 <body class="  ">
     <div>
-        <a href="../admin/createpost"><button type="submit" class="btn btn-primary d-block w-100 mt-11">Main Page</button></a>
+        <a href="../admin/Content"><button type="submit" class="btn btn-primary d-block w-100 mt-11">Main Page</button></a>
         <style>
             .mt-11 {
                 margin-top: 0.10rem;

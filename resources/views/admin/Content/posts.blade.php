@@ -11,7 +11,6 @@
                                     <div class="header-title">
                                         <h4 class="card-title">Created Post</h4>
                                     </div>
-
                                     <div class="card-post-toolbar">
                                         <div class="dropdown">
                                         <span class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
@@ -25,6 +24,7 @@
                                                 <div class="card-body">
                                                     <a style="color: red" href="{{route('admin.Content.destroy',['id' => $newdata->id])}}">Delete</a>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -40,20 +40,27 @@
                                     {{--h4>{{$members->photovideofile}}</h4>--}}
                                     {{--<h3>Written things</h3>--}}
                                 </div>
-                                <div>
+                                <hr class="betweenpostandcomments">
+                                <div class="codyofcomments">
                                     <img src="../admin/html/assets/images/icon/01.png" class="img-fluid" alt="">
                                     <a href="#"><bottom>Likes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</bottom></a>
-                                    <a href="#"><bottom>Comment</bottom></a>
+                                    <botton> <a href="/admin/comment/create" class="commentforpost">Create Comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> </botton>
+                                    <a href="/admin/comment/show"><bottom>Comments</bottom></a>
                                 </div>
                                 {{--<hr class="postcomment">--}}
-                                <form class="comment-text d-flex align-items-center mt-3" action="javascript:void(0);">
-                                    <input type="text" class="form-control rounded" placeholder="Enter Your Comment">
-                                    <div class="comment-attagement d-flex">
-                                        <a href="#"><i class="ri-link me-3"></i></a>
-                                        <a href="#"><i class="ri-user-smile-line me-3"></i></a>
-                                        <a href="#"><i class="ri-camera-line me-3"></i></a>
-                                    </div>
-                                </form>
+{{--                                <form class="comment-text d-flex align-items-center mt-3" action="javascript:void(0);">--}}
+{{--                                <form class="comment-text d-flex align-items-center mt-3" action="{{route('admin.Content.store')}}">--}}
+{{--                                    <input type="text" class="textforcomment" placeholder="Enter Your Comment">--}}
+{{--                                    <input type="file" class="photoforcomment">--}}
+{{--                                    <div class="comment-attagement d-flex">--}}
+{{--                                        --}}{{----}}
+{{--                                        <a href="#"><i class="ri-link me-3"></i></a>--}}
+{{--                                        <a href="#"><i class="ri-user-smile-line me-3"></i></a>--}}
+{{--                                        <a href="#"><i class="ri-camera-line me-3"></i></a>--}}
+{{--                                        --}}
+{{--                                        --}}{{--<a href=""><bottom><img src="../../admin\html\assets\images\new\camera.png" width="20" height="20" style="margin: 10"></bottom></a>--}}
+{{--                                    </div>--}}
+{{--                                </form>--}}
                             </div>
                         </div>
                     </div>
@@ -122,5 +129,18 @@
     }
     .img-fluid{
         margin-left: 20;
+    }
+    .textforcomment{
+        margin: 8;
+        width: 100%;
+    }
+    .photoforcomment{
+        width: 25%;
+    }
+    .codyofcomments{
+        margin-bottom: 13;
+    }
+    .betweenpostandcomments{
+        margin : 3 3 10 3;
     }
 </style>
