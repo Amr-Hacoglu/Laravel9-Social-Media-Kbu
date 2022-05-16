@@ -167,6 +167,20 @@ Route::prefix('admin/comment')->name('admin.comment')->controller(commentControl
 
 });
 
+Route::prefix('admin')->name('admin.')->group(function () {
+
+    Route::get('/setting', [App\Http\Controllers\AdminPanel\HomeController::class, 'setting'])->name('setting');
+
+    Route::post('/setting', [App\Http\Controllers\AdminPanel\HomeController::class, 'settingUpdate'])->name('setting.update');
+});
+
+
+
+
+
+
+
+
 
 Route::get('/laravel', function () {
     return Inertia::render('Welcome', [

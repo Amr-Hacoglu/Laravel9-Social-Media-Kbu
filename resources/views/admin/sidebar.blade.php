@@ -41,7 +41,7 @@
                         <span>Users</span>
                     </a>
                 </li><li class="">
-                    <a href="/" class=" ">
+                    <a href="{{route('admin.setting')}}" class=" ">
                         <img src="../../admin\html\assets\images\new\settings.png" height="20" width="20">
                         &emsp;
                         <span>Setting</span>
