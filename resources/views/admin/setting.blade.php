@@ -54,6 +54,7 @@
                                     <input type="text" name="address" value="{{$data->address}}" class="form-control">
                                 </div>
 
+
                                 <div class="header-title">
                                     <h4 class="card-title">Account Information</h4>
                                 </div>
