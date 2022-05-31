@@ -90,6 +90,9 @@ Route::post('/store','store')->name('store');
 
 // ************************* Post *************************
 
+
+
+
 Route::prefix('admin/Content')->name('admin.Content')->controller(contentController::class)->group(function (){
 
     Route::get('','index')->name('');
@@ -105,6 +108,11 @@ Route::prefix('admin/Content')->name('admin.Content')->controller(contentControl
     Route::get('/destroy/{id}','destroy')->name('.destroy');
 
     Route::get('/show/{id}','show')->name('.show');
+
+    Route::view('/loginuser','home.login');
+
+    Route::view('/registeruser','home.register');
+
 
     //Route::get('/show','show')->name('.show');
 
@@ -173,9 +181,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::post('/setting', [App\Http\Controllers\AdminPanel\HomeController::class, 'settingUpdate'])->name('setting.update');
 });
-
-
-
 
 
 

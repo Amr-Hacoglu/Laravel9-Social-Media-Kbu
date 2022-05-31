@@ -334,48 +334,37 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
+
+                        @auth
+
                         <a href="#" class="   d-flex align-items-center dropdown-toggle" id="drop-down-arrow" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="../../admin\html\assets\images\user/1.jpg" class="img-fluid rounded-circle me-3" alt="user">
                             <div class="caption">
-                                <h6 class="mb-0 line-height">Bni Cyst</h6>
+                                <h6 class="mb-0 line-height">{{Auth::user()->name}}</h6>
                             </div>
                         </a>
+
+                        @endauth
+
                         <div class="sub-drop dropdown-menu caption-menu" aria-labelledby="drop-down-arrow">
                             <div class="card shadow-none m-0">
                                 <div class="card-header  bg-primary">
                                     <div class="header-title">
-                                        <h5 class="mb-0 text-white">Hello Bni Cyst</h5>
+                                        <h5 class="mb-0 text-white">Hello {{Auth::user()->name}}</h5>
                                         <span class="text-white font-size-12">Available</span>
                                     </div>
+{{--                                    <a href="/admin/Content/logoutuser" class="text-uppercase">Logout</a>--}}
                                 </div>
+{{--                                @guest()--}}
                                 <div class="card-body p-0 ">
-                                    <a href="../../admin\html\app/profile.html" class="iq-sub-card iq-bg-primary-hover">
-                                        <div class="d-flex align-items-center">
-                                            <div class="rounded card-icon bg-soft-primary">
-                                                <i class="ri-file-user-line"></i>
-                                            </div>
-                                            <div class="ms-3">
-                                                <h6 class="mb-0 ">My Profile</h6>
-                                                <p class="mb-0 font-size-12">View personal profile details.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="../../admin\html\app/profile-edit.html" class="iq-sub-card iq-bg-warning-hover">
-                                        <div class="d-flex align-items-center">
-                                            <div class="rounded card-icon bg-soft-warning">
-                                                <i class="ri-profile-line"></i>
-                                            </div>
-                                            <div class="ms-3">
-                                                <h6 class="mb-0 ">Edit Profile</h6>
-                                                <p class="mb-0 font-size-12">Modify your personal details.</p>
-                                            </div>
-                                        </div>
-                                    </a>
                                     <div class="d-inline-block w-100 text-center p-3">
-                                        <a class="btn btn-primary iq-sign-btn" href="/admin/users/signup" role="button">Signout<i class="ri-login-box-line ms-2"></i></a>
+                                        <a class="btn btn-block btn-success" href="/admin/Content/loginuser" role="button">Login<i></i></a>
+                                        <a class="btn btn-block btn-info" href="/admin/Content/registeruser" role="button">Join<i></i></a>
+                                        <a class="btn btn-block btn-danger" href="/admin/users/signup" role="button">Signout<i class="ri-login-box-line ms-2"></i></a>
                                     </div>
                                 </div>
-                            </div>
+{{--                                @endguest--}}
+                            </div>s
                         </div>
                     </li>
                 </ul>
